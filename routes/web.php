@@ -1,22 +1,34 @@
 <?php
 
+/*
+ * A clase Route contem varios metodos que representam as requisiçoes http feitas ao servidor. 
+ * esses metodos possuem dois parametros principais. O primeiro parametro representa a url da requisiçao feita. 
+ * O segundo parametro é a funçao a ser executada para atender a requisiçao 
+ */
+
+
+// aqui estao cadstradas todas as rotas da logica de autenticaçao
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+// ao acessar o link "/", executar a funçao a seguir
 Route::get('/', function() {
     return "<h1>sejam bem vindos!</h1><a href='/exemplo'>Ir pra outra página</a>";
 });
 
+// ao acessar o link "/exemplo", executar a funçao a seguir
 Route::get('/exemplo', function() {
     return "<h1>Outra página</h1><a href='/exemplo/dentro'>Continuar navegando</a>";
 });
 
+// ao acessar o link "/exemplo/dentro", executar a funçao a seguir
 Route::get('/exemplo/dentro', function() {
     return "<h1>Mais uma página</h1><a href='/'>Ir para página inicial</a>";
 });
 
+// ao acessar o link "/lp", executar a funçao a seguir
 Route::get('/lp', function() {
+    // a funçao view retorna uma pagina com o mesmo nome que foi passado como parametro
+    // as paginas no laravel ficam dentro da pasta resources/views
     return view("disciplina1");
 });
 
@@ -24,7 +36,13 @@ Route::get('/dw', function() {
     return view("disciplina2");
 });
 
+// ao acessar o link "/home", executar a funçao index da classe HomeController
+Route::get('/home', 'HomeController@index')->name('home');
+
+// ao acessar o link "/f", executar a funçao minhafuncao da classe TesteController
 Route::get('/f', 'TesteController@minhafuncao');
+
+
 
 //o usuário consegue enviar um valor através de uma url (registrado entre chaves simples aqui no arquivo de rotas)
 Route::get('/teste/{variavel}', 'TesteController@teste');
