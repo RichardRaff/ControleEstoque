@@ -42,10 +42,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // ao acessar o link "/f", executar a funçao minhafuncao da classe TesteController
 Route::get('/f', 'TesteController@minhafuncao');
 
-
-
 //o usuário consegue enviar um valor através de uma url (registrado entre chaves simples aqui no arquivo de rotas)
-Route::get('/teste/{variavel}', 'TesteController@teste');
+// A variavel var é passada como parametro para a funçao teste
+Route::get('/teste/{var}', 'TesteController@teste');
 
 Route::get('/teste2/{idade}', 'TesteController@permissao');
 

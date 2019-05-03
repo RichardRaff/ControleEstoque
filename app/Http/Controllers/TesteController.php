@@ -10,11 +10,13 @@ class TesteController extends Controller {
         return view("pagina");
     }
 
-    function teste($variavel) {
+    // A variavel $variavel foi passada pelo usuario atraves da url
+    function teste($var) {
         $outra_variavel = 'programando laravel';
-        $meu_nome = 'Pedro Henrique';
+        $meu_nome = 'Fulano de Tal';
+        // A funçao view tbm aceita um segundo parametro, que é um vetor variaveis que sao enviadas para a view especificada no primeiro parametro
         //compact serve para enviar as variáveis para a view especificada
-        return view('teste', compact('variavel', 'outra_variavel', 'meu_nome'));
+        return view('teste', compact('var', 'outra_variavel', 'meu_nome'));
     }
 
     //a variavel $idade foi passada pelo usuario atraves da URL
