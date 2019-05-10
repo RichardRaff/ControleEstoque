@@ -10,6 +10,7 @@ Isto é anexado ao cabeçalho.
 @section('content')
 
 <p>Este é o conteúdo da página</p>
+<p>{{$msg}}</p>
 
 {{--
 um comentario blade pode ter várias linhas.

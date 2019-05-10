@@ -59,8 +59,10 @@ Route::get('/filho1', function() {
     return view('child1');
 });
 
-Route::get('filho2', function() {
-    return view('child2', ['variavel' => 'este é um texto qualquer que foi passado para a view']);
+Route::get('/filho2', function() {
+//    $msg = 'este é um texto qualquer que foi passado para a view';
+//    return view('child2', compact('msg'));
+    return view('child2', ['msg' => 'este é um texto qualquer que foi passado para a view']);
 });
 
 Route::get('/filho3', 'TesteController@funcao1');
