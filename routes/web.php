@@ -67,7 +67,6 @@ Route::get('/filho2', function() {
 
 Route::get('/filho3', 'TesteController@funcao1');
 
-
 Route::get('/req1/{param1}/{param2}', 'TesteController@funcaoGet');
 
 Route::post('/req2', 'TesteController@funcaoPost');

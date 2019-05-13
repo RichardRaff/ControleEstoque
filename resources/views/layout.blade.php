@@ -12,7 +12,12 @@
                 <div class='col border header '>
                     @section('header')
                     Aqui é o cabeçalho.
+                    {{--
+                    @endsection
+                    @yield('header')
+                    --}}
                     @show
+                    
                 </div>
             </div>
             <div class="row">

@@ -24,10 +24,14 @@
     @endforeach
 </ul>
 
+@endsection
+
+@section("sidebar")
+
 <p>Frutas:</p>
 <ul>
   @for ($i = 0; $i < sizeof($frutas); $i++)
-    <li>{{$frutas[$i]}}</li>
+    <li>{{ $frutas[$i] }}</li>
   @endfor
 </ul>
 
