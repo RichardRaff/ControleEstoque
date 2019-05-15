@@ -1,7 +1,6 @@
 @extends('layout')
 
 {{--
-    
 comentario blade começa com duas chaves e dois sinal de menos e termina com dois sinais de menos e duas chaves.
 um comentario blade pode ter várias linhas.
 
