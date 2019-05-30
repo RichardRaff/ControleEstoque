@@ -75,27 +75,28 @@ Route::get('/requisicao', function() {
     return view('requisicao');
 });
 
-////exibe todos os produtos do banco
-//Route::get('/produtos', 'ProdutoController@index');
-//
-////abre o formulario pra criar um produto
-//Route::get('/produtos/create', function() {
+//exibe todos os produtos do banco
+Route::get('/produtos', 'ProdutoController@getProdutos');
+
+//exibe um produto específico
+Route::get('/produtos/{id}', 'ProdutoController@getProduto');
+
+//////abre o formulario pra criar um produto
+//Route::get('/produtos/criar', function() {
 //    //abre a view 'create' que está dentro
 //    //da pasta 'produtos'
-//    return view("produtos.create");
+//    return view("produtos.formulario_criar");
 //});
 //
 ////cria um novo produto no banco
-//Route::post('/produtos', 'ProdutoController@store');
+//Route::post('/produtos', 'ProdutoController@postProduto');
 //
 ////deleta um produto específico do banco
-//Route::delete('/produtos/{produto}', 'ProdutoController@destroy');
+//Route::delete('/produtos/{id}', 'ProdutoController@delete');
 //
 ////exibe um formulario para editar um produto específico
-//Route::get('/produtos/{produto}/edit', 'ProdutoController@edit');
+//Route::get('/produtos/{id}/edit', 'ProdutoController@formularioProduto');
 //
 ////altera as informacoes de um produto específico
-//Route::put('/produtos/{produto}', 'ProdutoController@update');
+//Route::put('/produtos/{id}', 'ProdutoController@updateProduto');
 //
-////exibe um produto específico
-//Route::get('/produtos/{produto}', 'ProdutoController@show');

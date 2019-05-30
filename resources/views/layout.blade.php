@@ -3,8 +3,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Estoque - @yield('title')</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     </head>
     <body>
         <div class="container">
@@ -32,10 +32,10 @@
                 <div class='col border menu'>Aqui é o rodapé</div>
             </div>
         </div>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/app.js"></script>
+        <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         @yield('scripts')
     </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('layout');
+@extends('layout')
 
 @section('content')
 <p>Bem vindo à turma {{$disciplina}}. Você está no {{$periodo}}º período.</p>
